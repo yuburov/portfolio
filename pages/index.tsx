@@ -16,21 +16,21 @@ import { fetchProjects } from "../utils/fetchProjects";
 import { fetchSocials } from "../utils/fetchSocials";
 import { fetchSkills } from "../utils/fetchSkills";
 
-type Props = {
-  pageInfo: PageInfo;
-  experiences: Experience[];
-  skills: Skill[];
-  projects: Project[];
-  socials: Social[];
-};
+// type Props = {
+//   pageInfo: PageInfo;
+//   experiences: Experience[];
+//   skills: Skill[];
+//   projects: Project[];
+//   socials: Social[];
+// };
 
 export default function Home({
-  pageInfo,
-  experiences,
-  skills,
-  projects,
-  socials,
-}: Props): ReturnType<React.FC> {
+  // pageInfo,
+  // experiences,
+  // skills,
+  // projects,
+  // socials,
+}): ReturnType<React.FC> {
   return (
     <div
       className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory
@@ -40,7 +40,7 @@ export default function Home({
         <title>My Portfolio</title>
       </Head>
 
-      <Header socials={socials} />
+      {/* <Header socials={socials} />
       <section id="hero" className="snap-start">
         <Hero pageInfo={pageInfo} />
       </section>
@@ -55,7 +55,7 @@ export default function Home({
       </section>
       <section id="projects" className="snap-center">
         <Projects projects={projects} />
-      </section>
+      </section> */}
       <section id="contact" className="snap-center">
         <ContactMe />
       </section>
@@ -75,20 +75,20 @@ export default function Home({
   );
 }
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const pageInfo: PageInfo = await fetchPageInfo();
-  const experiences: Experience[] = await fetchExperiences();
-  const skills: Skill[] = await fetchSkills();
-  const projects: Project[] = await fetchProjects();
-  const socials: Social[] = await fetchSocials();
-  return {
-    props: {
-      pageInfo,
-      experiences,
-      skills,
-      projects,
-      socials,
-    },
-    revalidate: 10,
-  };
-};
+// export const getStaticProps: GetStaticProps<Props> = async () => {
+//   const pageInfo: PageInfo = await fetchPageInfo();
+//   const experiences: Experience[] = await fetchExperiences();
+//   const skills: Skill[] = await fetchSkills();
+//   const projects: Project[] = await fetchProjects();
+//   const socials: Social[] = await fetchSocials();
+//   return {
+//     props: {
+//       pageInfo,
+//       experiences,
+//       skills,
+//       projects,
+//       socials,
+//     },
+//     revalidate: 10,
+//   };
+// };
