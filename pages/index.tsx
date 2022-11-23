@@ -39,7 +39,6 @@ export default function Home({
       <Head>
         <title>My Portfolio</title>
       </Head>
-
       <Header socials={socials} />
       <section id="hero" className="snap-start">
         <Hero pageInfo={pageInfo} />
